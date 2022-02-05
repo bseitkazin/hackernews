@@ -29,7 +29,7 @@ public class NewsParseTask {
 					.timeout(5000)
 					.referrer("https://google.com")
 					.get();
-			Elements news = doc.getElementsByClass("storylink");
+			Elements news = doc.getElementsByClass("titlelink");
 			for (Element el: news) {
 				String title = el.ownText();
 				if (!newsService.isExist(title)) {
